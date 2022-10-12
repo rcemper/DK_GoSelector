@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="goselector.ZPM">
+  <Document name="alwo-goselector.ZPM">
     <Module>
-      <Name>goselector</Name>
+      <Name>alwo-goselector</Name>
       <Version>1.0.0</Version>
       <Description>See Database Table Column Selectivity Vs Ratio of Distinct Values</Description>
       <Keywords>selectivity distinct sql index</Keywords>
