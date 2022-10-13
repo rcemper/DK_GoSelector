@@ -3,7 +3,7 @@
   <Document name="alwo-goselector.ZPM">
     <Module>
       <Name>alwo-goselector</Name>
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
       <Description>See Database Table Column Selectivity Vs Ratio of Distinct Values</Description>
       <Keywords>selectivity distinct sql index</Keywords>
       <Packaging>module</Packaging>
