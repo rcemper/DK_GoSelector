@@ -8,6 +8,7 @@
       <Keywords>selectivity distinct sql index</Keywords>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
+	  <Resource Name="alwo.GoSelector.CLS"/>
     </Module>
   </Document>
 </Export>

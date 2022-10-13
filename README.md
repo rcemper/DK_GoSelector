@@ -1,4 +1,45 @@
 # GoSelector
+---
+## Installation with ZPM
+
+If the current ZPM instance is not installed, then in one line you can install the latest version of ZPM even with a proxy.
+```
+s r=##class(%Net.HttpRequest).%New(),proxy=$System.Util.GetEnviron("https_proxy") Do ##class(%Net.URLParser).Parse(proxy,.pr) s:$G(pr("host"))'="" r.ProxyHTTPS=1,r.ProxyTunnel=1,r.ProxyPort=pr("port"),r.ProxyServer=pr("host") s:$G(pr("username"))'=""&&($G(pr("password"))'="") r.ProxyAuthorization="Basic "_$system.Encryption.Base64Encode(pr("username")_":"_pr("password")) set r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/latest/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
+```
+If ZPM is installed, then ZAPM can be set with the command
+```
+zpm:USER>install alwo-goselector
+```
+## Installation with Docker
+
+## Prerequisites
+Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
+
+## Installation 
+Clone/git pull the repo into any local directory
+
+```
+$ git clone https://github.com/alexatwoodhead/GoSelector
+```
+
+Open the terminal in this directory and run:
+
+```
+$ docker-compose build
+```
+
+3. Run the IRIS container with your project:
+
+```
+$ docker-compose up -d
+```
+
+## How to Test it
+Open IRIS terminal:
+
+```
+$ docker-compose exec iris iris session iris
+
 
 Database Column Selectivity is used as a guide by SQL Engine to influence choice of indexes for queries.
 Implemented values maybe have already been added to distributed code for example by:
