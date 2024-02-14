@@ -10,6 +10,7 @@ USER ${ISC_PACKAGE_MGRUSER}
 COPY  src src
 COPY module.xml module.xml
 COPY iris.script /tmp/iris.script
+COPY .iris_init /home/irisowner/.iris_init
 
 RUN iris start IRIS \
 	&& iris session IRIS < /tmp/iris.script \
