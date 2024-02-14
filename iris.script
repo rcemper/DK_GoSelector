@@ -1,8 +1,13 @@
-;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
-
 zn "%SYS"
 Do ##class(Security.Users).UnExpireUserPasswords("*")
+zpm "install passwordless"
 
 zn "USER"
-zpm "load /opt/irisapp/ -v":1:1
+
+// Create /_vscode web app to support intersystems-community.testingmanager VS Code extension
+zpm "install vscode-per-namespace-settings"
+zpm "install webterminal"
+
+zpm "load /opt/irisapp/ -v":1
+
 halt
